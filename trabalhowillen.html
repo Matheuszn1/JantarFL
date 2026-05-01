@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Jantar dos Filósofos</title>
+<link rel="stylesheet" href="css.css">
+<style>
+.faq .a { display: none; }
+</style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>🍝 JANTAR DOS FILÓSOFOS</h1>
+        <p>Um problema clássico de concorrência e sincronização</p>
+    </div>
+
+    <div class="top-controls">
+        <button class="btn green" onclick="iniciar()">▶ Iniciar</button>
+        <button class="btn orange" onclick="parar()">⏸ Pausar</button>
+        <button class="btn red" onclick="resetar()">🔄 Resetar</button>
+
+        <select onchange="velocidade=this.value">
+            <option value="1500">Lenta</option>
+            <option value="800" selected>Média</option>
+            <option value="300">Rápida</option>
+        </select>
+    </div>
+</header>
+
+<main>
+
+<section class="left">
+
+<div class="card">
+<h3>📘 HISTÓRIA (RESUMIDA)</h3>
+<p>
+Criado por Edsger Dijkstra em 1965 para demonstrar problemas de concorrência.
+Mostra como processos compartilham recursos limitados.
+</p>
+</div>
+
+<div class="card">
+<h3>❓ PERGUNTAS FREQUENTES</h3>
+
+<div class="faq">
+<div class="q" onclick="toggle(this)">História do problema</div>
+<div class="a">Criado por Dijkstra para explicar concorrência.</div>
+
+<div class="q" onclick="toggle(this)">Deadlock</div>
+<div class="a">Todos travam esperando recursos.</div>
+
+<div class="q" onclick="toggle(this)">Solução</div>
+<div class="a">Semáforos, ordem ou controle.</div>
+
+<div class="q" onclick="toggle(this)">Importância</div>
+<div class="a">Base da computação moderna.</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="center">
+<h3 class="title">💻 SIMULAÇÃO</h3>
+<canvas id="mesa" width="500" height="500"></canvas>
+
+<div class="legend">
+<span>⚪ Pensando</span>
+<span>🟠 Esperando</span>
+<span>🟢 Comendo</span>
+</div>
+</section>
+
+<section class="right">
+
+<div class="card">
+<h3>⚙️ STATUS DOS FILÓSOFOS</h3>
+<div id="status"></div>
+</div>
+
+<div class="card">
+  <h3>📜 EVENTOS (LOG)</h3>
+  <div id="log" class="log"></div>
+</div>
+
+<div>
+    <button id="btnLimpar" class="btn blue small">Limpar log</button>
+</div>
+
+<script>
+  // Garante que o botão funcione mesmo sem inline onclick
+  document.getElementById("btnLimpar").addEventListener("click", limparLog);
+</script>
+
+
+</section>
+
+</main>
+
+<section class="bottom">
+
+<div class="box redBox">
+<h3>⚠️ DEADLOCK</h3>
+<p>Todos pegam um recurso e ninguém avança.</p>
+</div>
+
+<div class="box greenBox">
+<h3>🛠️ SOLUÇÃO</h3>
+<p>Ordem, semáforos ou controle central.</p>
+</div>
+
+<div class="box yellowBox">
+<h3>💡 IMPORTÂNCIA</h3>
+<p>Base de sistemas operacionais e servidores.</p>
+</div>
+
+<div class="box purpleBox">
+<h3>⭐ STARVATION</h3>
+<p>Alguns nunca conseguem executar.</p>
+</div>
+
+</section>
+
+<script src="javascript.js"></script>
+</body>
+</html>
