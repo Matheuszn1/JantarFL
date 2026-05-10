@@ -1,4 +1,3 @@
-/* ===== RESET ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,7 +5,6 @@ body {
     background: radial-gradient(circle at top, #0f172a, #020617 80%);
 }
 
-/* ===== HEADER ===== */
 header {
     display: flex;
     justify-content: space-between;
@@ -14,7 +12,6 @@ header {
     padding: 15px 30px;
 }
 
-/* ===== CONTROLES ===== */
 .top-controls {
     display: flex;
     gap: 10px;
@@ -38,7 +35,6 @@ header {
 .orange { background: #f39c12; }
 .red { background: #e74c3c; }
 
-/* ===== LAYOUT ===== */
 main {
     display: flex;
     gap: 20px;
@@ -54,7 +50,6 @@ main {
     text-align: center;
 }
 
-/* ===== CARDS (TODOS) ===== */
 .card {
     background: rgba(20, 25, 45, 0.6);
     backdrop-filter: blur(12px);
@@ -68,7 +63,6 @@ main {
     margin-bottom: 15px;
 }
 
-/* brilho interno */
 .card::before {
     content: "";
     position: absolute;
@@ -87,20 +81,17 @@ main {
     opacity: 1;
 }
 
-/* ===== TITULOS ===== */
 .card h3 {
     margin-top: 0;
     color: #8ab4ff;
     text-shadow: 0 0 6px rgba(138,180,255,0.4);
 }
 
-/* ===== CANVAS ===== */
 canvas {
     background: radial-gradient(circle, #1e2a44, #0b1020);
     border-radius: 50%;
 }
 
-/* ===== STATUS ===== */
 #status {
     display: flex;
     flex-direction: column;
@@ -116,7 +107,6 @@ canvas {
     border: 1px solid rgba(255,255,255,0.05);
 }
 
-/* ===== SELECT ===== */
 select {
     background: rgba(20, 25, 45, 0.8);
     color: white;
@@ -125,7 +115,6 @@ select {
     border-radius: 8px;
 }
 
-/* ===== LOG ===== */
 .log {
     height: 150px;
     overflow-y: auto;
@@ -137,14 +126,12 @@ select {
     line-height: 1.4;
 }
 
-/* ===== CAIXAS INFERIORES ===== */
 .bottom {
     display: flex;
     gap: 15px;
     padding: 20px;
 }
 
-/* BASE */
 .box {
     flex: 1;
     padding: 18px;
@@ -156,7 +143,6 @@ select {
     position: relative;
 }
 
-/* brilho */
 .box::before {
     content: "";
     position: absolute;
@@ -174,7 +160,6 @@ select {
     opacity: 1;
 }
 
-/* DEADLOCK */
 .redBox {
     border-color: #ff3b3b;
     box-shadow: 0 0 15px rgba(255, 59, 59, 0.25);
@@ -185,7 +170,6 @@ select {
     text-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
 }
 
-/* SOLUÇÃO */
 .greenBox {
     border-color: #2ecc71;
     box-shadow: 0 0 15px rgba(46, 204, 113, 0.25);
@@ -196,7 +180,6 @@ select {
     text-shadow: 0 0 8px rgba(46, 204, 113, 0.6);
 }
 
-/* IMPORTÂNCIA */
 .yellowBox {
     border-color: #f1c40f;
     box-shadow: 0 0 15px rgba(241, 196, 15, 0.25);
@@ -207,7 +190,6 @@ select {
     text-shadow: 0 0 8px rgba(241, 196, 15, 0.6);
 }
 
-/* STARVATION */
 .purpleBox {
     border-color: #9b59b6;
     box-shadow: 0 0 15px rgba(155, 89, 182, 0.25);
@@ -218,7 +200,6 @@ select {
     text-shadow: 0 0 8px rgba(187, 107, 217, 0.6);
 }
 
-/* ===== FAQ MELHORADO ===== */
 .faq .q {
     background: rgba(30, 40, 70, 0.8) !important;
     padding: 12px !important;
@@ -267,14 +248,11 @@ select {
     padding: 15px !important;
 }
 
-/* ===== BOTÃO LIMPAR LOG ===== */
-/* ===== BOTÕES DE CORES ===== */
 .green { background: #2ecc71; }
 .orange { background: #f39c12; }
 .red { background: #e74c3c; }
-.blue { background: #3498db; }   /* NOVO */
+.blue { background: #3498db; }  
 
-/* ===== BOTÃO LIMPAR LOG ===== */
 .btn.small {
     padding: 6px 12px !important;
     font-size: 12px !important;
@@ -283,7 +261,7 @@ select {
     cursor: pointer !important;
     display: inline-block;
 
-    background: #3498db;   /* azul */
+    background: #3498db; 
     color: #fff;
     border: none;
     font-weight: bold;
@@ -291,9 +269,8 @@ select {
 }
 
 .btn.small:hover {
-    background: #2980b9;   /* azul mais escuro no hover */
+    background: #2980b9;  
     transform: translateY(-2px);
 }
-
 
 .blue { background: #3498db; }
