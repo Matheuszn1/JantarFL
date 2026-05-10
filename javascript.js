@@ -7,12 +7,12 @@ let garfos = [];
 let intervalo = null;
 let velocidade = 800;
 
-/* ===== FAQ - FUNÇÃO ===== */
+
 function toggle(element) {
     const faqContainer = element.closest('.faq');
     const isOpen = element.classList.contains('active');
 
-    // Fecha todas as perguntas
+    
     const allQuestions = faqContainer.querySelectorAll('.q');
     allQuestions.forEach(q => {
         q.classList.remove('active');
@@ -22,7 +22,7 @@ function toggle(element) {
         }
     });
 
-    // Abre a clicada
+    
     if (!isOpen) {
         element.classList.add('active');
         const answer = element.nextElementSibling;
@@ -34,7 +34,7 @@ function toggle(element) {
     }
 }
 
-/* ===== LOG ===== */
+
 function log(msg){
     let el = document.getElementById("log");
     el.innerHTML += msg + "<br>";
@@ -44,21 +44,21 @@ function log(msg){
 function limparLog(){
     const logElement = document.getElementById("log");
     logElement.innerHTML = "";
-    // Se quiser deixar vazio, basta remover a linha abaixo
+    
     log("Log limpo ✅");
 }
 function limparLog(){
     const logElement = document.getElementById("log");
     logElement.innerHTML = "";
-    // Se quiser deixar vazio, basta remover a linha abaixo
+    
     log("Log limpo ✅");
 }
 
-// Integração com o botão
+
 document.getElementById("btnLimpar").addEventListener("click", limparLog);
 
 
-/* ===== CRIAR ===== */
+
 function criar(){
     filosofos = [];
     garfos = new Array(num).fill(true);
@@ -68,7 +68,6 @@ function criar(){
     }
 }
 
-/* ===== DESENHAR ===== */
 function desenhar(){
     ctx.clearRect(0,0,500,500);
 
@@ -93,7 +92,6 @@ function desenhar(){
     }
 }
 
-/* ===== TENTAR COMER ===== */
 function tentar(i){
     let e=i;
     let d=(i+1)%num;
@@ -114,7 +112,6 @@ function tentar(i){
     }
 }
 
-/* ===== CICLO ===== */
 function ciclo(){
     filosofos.forEach((f,i)=>{
         if(f.estado==="pensando" && Math.random()<0.4) tentar(i);
@@ -125,7 +122,6 @@ function ciclo(){
     atualizar();
 }
 
-/* ===== STATUS ===== */
 function atualizar(){
     let html="";
 
@@ -151,7 +147,6 @@ function atualizar(){
     document.getElementById("status").innerHTML = html;
 }
 
-/* ===== CONTROLES ===== */
 function iniciar(){
     if(!intervalo){
         intervalo = setInterval(ciclo, velocidade);
@@ -173,7 +168,6 @@ function resetar(){
     log("Sistema resetado");
 }
 
-/* ===== INIT ===== */
 window.onload = function(){
     criar();
     desenhar();
